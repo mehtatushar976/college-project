@@ -1,0 +1,41 @@
+{{>header}}
+<body class="pic">
+    
+    <div class="container">
+        <h2>Add to find Roomate</h2>
+        <form action="/roomate" method="post" id="RoomForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="Name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="Age" placeholder="Enter your age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gender" name="Gender" value="male" checked required>
+                <span>Male</span>
+                <input type="radio" id="gender" name="Gender" value="female" checked required>
+                <span>Female</span>
+            </div>
+            <div class="form-group">
+                <label for="field">Field:</label>
+                <input type="text" id="field" name="Field" placeholder="Enter field of study" required>
+            </div>
+            <div class="form-group">
+                <label for="number">Mobile Number:</label>
+                <input type="number" id="number" name="Number" placeholder="Enter your mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="area">Area:</label>
+                <input type="text" id="area" name="Area" placeholder="Enter your area of room" required>
+            </div>
+            
+            <input type="submit" class="reg" value="Submit">
+            {{!-- <button type="submit" class="reg" value="Register">Register</button> --}}
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>

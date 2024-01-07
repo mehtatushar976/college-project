@@ -1,0 +1,49 @@
+{{>header}}
+<body class="pic">
+    {{>navvbar}}
+    <div class="container">
+        <h2>Registration</h2>
+        <form action="/register" method="post" id="registrationForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter Your Name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="radio" id="gender" name="gender" value="male" checked required>
+                <span>Male</span>
+                <input type="radio" id="gender" name="gender" value="female" checked required>
+                <span>Female</span>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Enter your number" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirmpassword">Confirm Password:</label>
+                <input type="password" id="password" name="confirmpassword" placeholder="Confirm your password" required>
+            </div>
+            
+            {{!-- <div class="otp-container" id="otpContainer">
+                <div class="form-group">
+                    <label for="otp">OTP:</label>
+                    <input type="number" id="otp" name="otp" required>
+                </div>
+            </div> --}}
+            {{!-- <button type="button" id="otpBtn">Send OTP</button> --}}
+            <input type="submit" class="reg" value="Register">
+            {{!-- <button type="submit" class="reg" value="Register">Register</button> --}}
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

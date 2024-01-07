@@ -1,0 +1,30 @@
+{{>header}}
+<body class="pic">
+    
+    <h2>AVAILABLE ROOMS</h2>
+    <div class="RoomBorder">
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Location</th>
+        <th>Price</th>
+        <th>Contact Number</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each x}}
+        <tr>
+          <td>{{this.title}}</td>
+          <td>{{this.location}}</td>
+          <td>{{this.price}}</td>
+          <td>{{this.number}}</td>
+          <td>{{this.description}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  </div>
+</body>
+</html>

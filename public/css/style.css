@@ -1,0 +1,378 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Set up basic styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    
+}
+
+header {
+    /* background-color: #7a7070; */
+    color: #fff;
+    padding: 1rem;
+    transition: background-color 0.3s ease; /* Header background color transition */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+nav h1 {
+    font-size: 2rem;
+    color: whitesmoke;
+    margin-left: 40rem;
+    transition: pink 0.3s ease; /* Header text color transition */
+}
+
+nav h1:hover{
+    color: rgb(166, 37, 67);
+    transition: 2s;
+    background-color: black;
+}
+
+.auth a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 20px;
+    transition: color 0.3s ease; /* Link color transition */
+} 
+
+.auth a:hover {
+    color: #f00; /* Change link color on hover */
+}
+
+/* Style the rest of your elements */
+main {
+    flex-grow: 1; /* Allow main content to grow and push footer to the bottom
+    /* max-width: 800px; */
+    /* margin: 0 auto;
+    padding: 20px;  */
+    
+    
+    
+}
+
+.pic{
+    background-image: linear-gradient(rgba(85, 85, 211, 0.5), rgba(231, 231, 134, 0.5)),url("https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 200px;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2px 0;
+    transition: background-color 0.3s ease; /* Footer background color transition */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    width: 500px;
+    height: 350px;
+    background-color: #e0e0e0;
+    margin-top: 150px;
+    margin-left: 150px;
+    margin-right: 50px;
+    padding: 20px;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    border: 5px solid grey;
+    border-radius: 20px;
+}
+
+.box1{
+    background-image: url("https://media.istockphoto.com/id/1652717832/photo/happy-young-indian-couple-having-fun-in-new-home-playing-with-boxes-real-estate-residential.jpg?s=2048x2048&w=is&k=20&c=20-6SngRJkpOjCOCak9NUzlfQACdP4vmlXg80AcMnf8=");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 5px solid grey;
+    border-radius: 20px;
+}
+
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 50px;
+    border: 10px double grey;
+    border-radius: 30px;
+}
+
+
+.reg{
+    padding: 7px 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(40, 120, 240);
+}
+
+
+h2 {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.otp-container {
+    display: none;
+}
+
+#otpBtn {
+    display: block;
+    margin: 10px auto;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.login-container{
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    margin: 0 auto;
+    padding: 50px;
+    margin-top: 80px;
+    border: 10px double grey;
+    border-radius: 30px;
+}
+
+.input-container{
+    margin: 20px;
+}
+ 
+
+
+.form-container1 {
+    background-color: whitesmoke;
+    max-width: 600px;
+    margin-top: 100px;
+    margin-left: 500px;
+    padding: 50px;
+    border: 10px double grey;
+    border-radius: 30px;
+}
+
+.form-group1 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.room{
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.work {
+    background-image: linear-gradient(rgba(126, 225, 250, 0.5), rgba(122, 212, 250, 0.5)), url('https://images.unsplash.com/photo-1614586125858-e695dd97d1b6?auto=format&fit=crop&q=80&w=1806&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: black;
+    text-align: center;
+    padding: 120px;
+  }
+  
+  .work h1{
+    margin-bottom: 20px;
+  }
+  
+  .work h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .work ol {
+    list-style: decimal inside;
+    padding-left: 0; /* Reset the left padding on the ordered list */
+    display: inline-block; /* Make the list centered within the container */
+  }
+  
+  .work li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: left; /* Left-align the text within the list items */
+    font-weight: 500;
+  }
+
+
+  table {
+    width: 80%; /* Adjust the width as needed */
+    margin: 20px auto; /* Center the table horizontally and add some space around it */
+    border-collapse: collapse;
+  }
+
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  td{
+    color: black;
+    font-size: 17px;
+    font-weight: 900;
+  }
+
+  th {
+    background-color: #f2f2f2;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  .RoomBorder{
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1300px;
+    margin: 0 auto;
+    
+    margin-top: 50px;
+    
+  }
+  
+  
+  /* You can add more CSS rules as needed to further style your content */
+  
+
+
+
+
+
+
+
+/* Add responsive styles here */
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    .auth {
+        margin-top: 10px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Adjust container width for smaller screens */
+    .container {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust container width and font size for even smaller screens */
+    .container {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    /* Center-align buttons */
+    #otpBtn,
+    button[type="submit"] {
+        display: block;
+        margin: 10px auto;
+    }
+}
+
+/* Media queries for responsive design */
+
+/* @media (max-width: 768px) {
+    .login-container {
+        max-width: 90%;
+    }
+} */
+
