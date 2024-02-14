@@ -24,10 +24,15 @@ header {
     transition: background-color 0.3s ease; /* Header background color transition */
 }
 
+    
+
+
 nav {
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* background-color: black; */
     
 }
 
@@ -36,15 +41,19 @@ nav h1 {
     color: whitesmoke;
     margin-left: 40rem;
     transition: pink 0.3s ease; /* Header text color transition */
+
 }
 
-nav h1:hover{
+/* nav h1:hover{
     color: rgb(166, 37, 67);
     transition: 2s;
     background-color: black;
-}
+} */
 
 .auth a {
+    background-color: rgb(2, 94, 2);
+    padding: 5px;
+    border-radius: 5px;
     text-decoration: none;
     color: #fff;
     margin-left: 20px;
@@ -110,7 +119,9 @@ footer {
 }
 
 .box1{
-    background-image: url("https://media.istockphoto.com/id/1652717832/photo/happy-young-indian-couple-having-fun-in-new-home-playing-with-boxes-real-estate-residential.jpg?s=2048x2048&w=is&k=20&c=20-6SngRJkpOjCOCak9NUzlfQACdP4vmlXg80AcMnf8=");
+    /* background-image: url("https://media.istockphoto.com/id/1652717832/photo/happy-young-indian-couple-having-fun-in-new-home-playing-with-boxes-real-estate-residential.jpg?s=2048x2048&w=is&k=20&c=20-6SngRJkpOjCOCak9NUzlfQACdP4vmlXg80AcMnf8="); */
+    /* background-image: url("https://thumbs.dreamstime.com/b/roommate-gold-sign-mounted-glossy-marble-wall-d-rendered-royalty-free-stock-illustration-image-can-be-used-online-86525665.jpg"); */
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220523/pngtree-dormitory-roommates-flat-color-vector-illustration-image_1379002.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -293,6 +304,7 @@ button {
     color: black;
     font-size: 17px;
     font-weight: 900;
+    background-color: #ddd;
   }
 
   th {
@@ -311,6 +323,16 @@ button {
     
     margin-top: 50px;
     
+  }
+
+  #x{
+    width: 1000px;
+    margin-left: 50px;
+    margin-top: 100px;
+    padding: 30px;
+    
+    font-size: xx-large;
+    font-style: italic;
   }
   
   
