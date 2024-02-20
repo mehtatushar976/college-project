@@ -3,85 +3,189 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* overflow: hidden; */
 }
 
 /* Set up basic styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: whitesmoke;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
-    
+
+html,body{
+    height: 100vh;
+    width: 100vw;
 }
 
-header {
-    /* background-color: #7a7070; */
-    color: #fff;
-    padding: 1rem;
-    transition: background-color 0.3s ease; /* Header background color transition */
+.style-hover:hover{
+    transition: transform 1s;
+    transform: scale(1.1);
 }
 
-    
-
-
-nav {
-    
+.head{
+    position: fixed;
+    top:0%;
+    z-index: 10;
+    width:100%;
+    background: #dbd3d3;
+    height:4.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* background-color: black; */
-    
+    justify-content: space-between;
+    border-radius: 0.5rem;
 }
 
-nav h1 {
-    font-size: 2rem;
-    color: whitesmoke;
-    margin-left: 40rem;
-    transition: pink 0.3s ease; /* Header text color transition */
-
+.header-nav{
+    display: flex;
+    padding: 0 1rem;
+    border-radius: 5rem;
 }
 
-/* nav h1:hover{
-    color: rgb(166, 37, 67);
-    transition: 2s;
-    background-color: black;
-} */
+.logo{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap:0.5rem
+}
 
-.auth a {
-    background-color: rgb(2, 94, 2);
-    padding: 5px;
-    border-radius: 5px;
+.logoimg{
+    height:6rem;
+    border-radius: 0.5rem;
+}
+
+.logoname{
+    font-family: "Dosis", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 2.5rem;
+    letter-spacing: 0;
+    font-weight: 700;
+    color: black;
+    padding: 0.5rem;
+    padding-left: 0;
+}
+
+.header-links{
+    display: flex;
+    gap:0.6rem;
+    margin-right: 2rem;
+}
+
+.header-links a{
     text-decoration: none;
     color: #fff;
-    margin-left: 20px;
-    transition: color 0.3s ease; /* Link color transition */
-} 
-
-.auth a:hover {
-    color: #f00; /* Change link color on hover */
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    padding:0.3rem 0.5rem;
+    background-color: rgb(26, 25, 25);
+    border-radius: 0.5rem;
 }
 
-/* Style the rest of your elements */
-main {
-    flex-grow: 1; /* Allow main content to grow and push footer to the bottom
-    /* max-width: 800px; */
-    /* margin: 0 auto;
-    padding: 20px;  */
-    
-    
-    
+.header-links a:hover{
+    transition:background-color 0.5s;
+    text-decoration: none;
+    color:black;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 500;
+    font-size: 1.35rem;
+    padding:0.3rem 0.5rem;
+    background-color: #fff;
+    border-radius: 0.5rem;
 }
 
-.pic{
-    background-image: linear-gradient(rgba(85, 85, 211, 0.5), rgba(231, 231, 134, 0.5)),url("https://images.unsplash.com/photo-1555854877-bab0e564b8d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80");
-    background-position: center;
-    background-repeat: no-repeat;
+.bgimg{
+    position: fixed;
+    height: 37rem;
+    width: 100%;
+    background: url("https://cdn.vox-cdn.com/thumbor/oVxByLo3H-cYEzgkxQguBUoUOxY=/0x0:1600x1200/1200x675/filters:focal(0x0:1600x1200)/cdn.vox-cdn.com/uploads/chorus_image/image/47679287/1G9A0404-2.0.0.jpg");
     background-size: cover;
-    padding-bottom: 200px;
+    background-repeat: no-repeat;   
+    background-position: bottom;
 }
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    background-color: #32333467;
+}
+
+.content{
+    width: 100%;    
+    top:32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-family: "Dosis", sans-serif;
+}
+
+.search-bar input[type="text"] {
+    position: absolute;
+    top:-38.5%;
+    left:25%;
+    width: 50%;
+    height: 3rem;
+    padding: 0.5rem;
+    border-radius: 2rem; 
+    border: none; 
+    outline: none; 
+    font-size: 1.1rem;
+}
+
+.heading{
+    font-size: 2.5rem;
+    color:white;
+    margin-bottom:2rem;
+}
+
+.main-content{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    font-family: "Dosis", sans-serif;
+    padding:1.75rem;
+}
+
+.main-content-heading{
+    font-size: 2.2rem;
+}
+.main-content-heading-description{
+    color: rgb(76, 75, 75);
+    margin: auto;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.flat-grids{
+    width:70%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin:auto;
+    gap:1.5rem;
+    padding: 1rem;
+}
+
+.flats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #dadada; */
+}
+
+.flat-img img{
+    height:9rem;
+    width:12rem;
+    border-radius: 0.2rem;
+    background-size: contain;
+    background-position: center;
+}
+
+.flat-name{
+    color: #000;
+    font-weight: 600;
+    font-size: large;
+}
+
 
 /* Style the footer */
 footer {
@@ -104,31 +208,6 @@ footer {
     align-items: center;
 }
 
-.box {
-    width: 500px;
-    height: 350px;
-    background-color: #e0e0e0;
-    margin-top: 150px;
-    margin-left: 150px;
-    margin-right: 50px;
-    padding: 20px;
-    display: inline-block;
-    color: rgb(0, 0, 0);
-    border: 5px solid grey;
-    border-radius: 20px;
-}
-
-.box1{
-    /* background-image: url("https://media.istockphoto.com/id/1652717832/photo/happy-young-indian-couple-having-fun-in-new-home-playing-with-boxes-real-estate-residential.jpg?s=2048x2048&w=is&k=20&c=20-6SngRJkpOjCOCak9NUzlfQACdP4vmlXg80AcMnf8="); */
-    /* background-image: url("https://thumbs.dreamstime.com/b/roommate-gold-sign-mounted-glossy-marble-wall-d-rendered-royalty-free-stock-illustration-image-can-be-used-online-86525665.jpg"); */
-    background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220523/pngtree-dormitory-roommates-flat-color-vector-illustration-image_1379002.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border: 5px solid grey;
-    border-radius: 20px;
-}
-
 
 .container {
     background-color: #fff;
@@ -136,7 +215,7 @@ footer {
     width: 700px;
     margin: 0 auto;
     padding: 50px;
-    margin-top: 50px;
+    margin-top: 5rem;
     border: 10px double grey;
     border-radius: 30px;
 }
@@ -198,6 +277,10 @@ input[type="password"] {
     margin-top: 80px;
     border: 10px double grey;
     border-radius: 30px;
+    /* position:absolute;
+    top:40%;
+    left:30%;
+    transform: translate(0,-50%); */
 }
 
 .input-container{
@@ -239,6 +322,16 @@ input[type="file"] {
     width: 100%;
     margin-top: 5px;
 }
+.auth a {
+    text-decoration: none;
+    color: white;
+    margin-left: 20px;
+    transition: color 0.3s ease; /* Link color transition */
+} 
+
+.auth a:hover {
+    color: #222; /* Change link color on hover */
+}
 
 button {
     background-color: #4CAF50;
@@ -260,6 +353,7 @@ button {
 .work {
     background-image: linear-gradient(rgba(126, 225, 250, 0.5), rgba(122, 212, 250, 0.5)), url('https://images.unsplash.com/photo-1614586125858-e695dd97d1b6?auto=format&fit=crop&q=80&w=1806&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
     background-size: cover;
+    width: 100%;
     background-position: center;
     color: black;
     text-align: center;
@@ -289,6 +383,38 @@ button {
   }
 
 
+   
+
+    .profile-container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-container h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+
+    .profile-info {
+      margin-bottom: 20px;
+    }
+
+    .profile-info label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .profile-info span {
+      color: #333;
+    }
+
+
   table {
     width: 80%; /* Adjust the width as needed */
     margin: 20px auto; /* Center the table horizontally and add some space around it */
@@ -304,7 +430,6 @@ button {
     color: black;
     font-size: 17px;
     font-weight: 900;
-    background-color: #ddd;
   }
 
   th {
@@ -323,16 +448,6 @@ button {
     
     margin-top: 50px;
     
-  }
-
-  #x{
-    width: 1000px;
-    margin-left: 50px;
-    margin-top: 100px;
-    padding: 30px;
-    
-    font-size: xx-large;
-    font-style: italic;
   }
   
   
@@ -398,3 +513,79 @@ button {
     }
 } */
 
+.footerContainer{
+    background-color: #111;
+    width: 100%;
+    /* padding: 100px 0px 10px 10px ; */
+    margin-bottom: 0;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 15px;
+    background-color: white;
+    margin: 15px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover{
+    color: rgb(151, 145, 145);
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 40px;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 5px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    }
+    .footerNav ul li{
+        width: 100%;
+        text-align: center;
+        /* margin: 10px; */
+    }
+}

@@ -10,6 +10,23 @@ const Register = require("./src/models/registers");
 const Room = require("./src/models/room");
 const Roomate = require("./src/models/roomate");
 const bcrypt = require("bcryptjs");
+const fileUpload = require('express-fileupload');
+const cloudinary = require("cloudinary").v2;
+const multer = require("multer")
+
+// const upload = multer({ dest: "uploads/"});
+
+const storage = multer.diskStorage({
+  destination: function(req,file,cb){
+    return cb(null, "./uploads");
+  },
+  filename: function(req,file,cb){
+    return cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
+
+const upload = multer({storage: storage});
+
 
 const static_path = path.join(__dirname, "/public");
 
@@ -27,6 +44,16 @@ hbs.registerPartials(partials_path);
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+
+app.use(fileUpload({
+  useTempFiles:true
+}))
+
+// cloudinary.config({
+//   cloud_name: 'dvvrcwnwa',
+//   api_key:'898316241993297',
+//   api_secret:'yZaZwlAM5eA4eVxDqww6Nqa84GM'
+// })
 
 app.get("/", (req, res) => {
   res.render("index");
@@ -68,6 +95,10 @@ app.get("/showRoomate", (req, res) => {
     });
 });
 
+app.get("/profile",(req,res)=>{
+  res.render("profile")
+})
+
 app.get("*", (req, res) => {
   res.send("PAGE NOT FOUND");
 });
@@ -79,11 +110,11 @@ app.post("/register", async (req, res) => {
 
     if (password === cpassword) {
       const registerEmployee = new Register({
-        name: req.body.name,
+        name: req.body.name, 
         email: req.body.email,
-        gender: req.body.gender,
+        gender: req.body.gender, 
         mobile: req.body.mobile,
-        password: req.body.password,
+        password: req.body.password, 
         confirmpassword: req.body.confirmpassword,
       });
 
@@ -116,19 +147,18 @@ app.post("/login", async (req, res) => {
   }
 });
 
-app.post("/new", async (req, res) => {
+app.post("/upload", async (req, res) => {
   try {
-    const addRoom = new Room({
-      title: req.body.Title,
-      location: req.body.Location,
-      price: req.body.Price,
-      number: req.body.Number,
-      description: req.body.Description,
-
-      // title: "Randi Khana",
-      // location: "ACEIT FACULTY HOSTEL ROOM NO -5",
-      // price: 50, // Set the price to a number
-      // description: "Sohan"
+    // const file = req.file.image;
+    // cloudinary.uploader.upload(file.tempFilePath,(err,result)=>{
+      const addRoom = new Room({
+        title: req.body.Title,
+        location: req.body.Location,
+        price: req.body.Price,
+        number: req.body.Number,
+        description: req.body.Description,
+        
+    // })
     });
 
     const added = await addRoom.save();
@@ -138,6 +168,25 @@ app.post("/new", async (req, res) => {
     // console.log(error)
   }
 });
+
+
+// app.post("/upload", upload.single("image"), async (req, res) => {
+//   try {
+//       const addRoom = new Room({
+//         title: req.body.Title,
+//         location: req.body.Location,
+//         price: req.body.Price,
+//         number: req.body.Number,
+//         description: req.body.Description,   
+//     });
+
+//     const added = await addRoom.save();
+//     res.status(201).render("after");
+//   } catch (error) {
+//     res.status(400).send(error);
+//     // console.log(error)
+//   }
+// });
 
 app.post("/roomate", async (req, res) => {
   try {
